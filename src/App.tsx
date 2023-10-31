@@ -1,15 +1,12 @@
-
-import './App.css'
-import Message from './Message'
-import ListGroup from './components/ListGroup'
+import "./App.css";
+import Alert from "./components/Alert";
 
 function App() {
-
   return (
     <>
-      <ListGroup/>
+      <Alert><i>Hello World</i></Alert>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
