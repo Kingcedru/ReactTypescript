@@ -1,10 +1,10 @@
 import "./App.css";
-import Message from "./Message";
+import Exercise2 from "./components/Exercise2";
 
 function App() {
   return (
     <>
-     <Message/>
+     <Exercise2/>
     </>
   );
 }
