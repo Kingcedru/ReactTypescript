@@ -1,3 +1,12 @@
+
+import "./App.css";
+import Exercise2 from "./components/Exercise2";
+
+function App() {
+  return (
+    <>
+     <Exercise2/>
+
 import './App.css'
 import ListGroup from './components/ListGroup'
 
@@ -12,7 +21,7 @@ const handleSelectItem = (item:string)=>{
     <>
       <ListGroup items={items} heading='Cities' onSelectItem={handleSelectItem}/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
