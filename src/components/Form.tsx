@@ -65,7 +65,12 @@ const Form = () => {
 //     </>
 // )
 
-const {register, handleSubmit,formState:{errors}} = useForm();
+interface FormData{
+    name:string,
+    age: number
+}
+
+const {register, handleSubmit,formState:{errors}} = useForm<FormData>();
     
     return(
         <>
@@ -76,8 +81,8 @@ const {register, handleSubmit,formState:{errors}} = useForm();
              </label>
              <input {...register('name',{required: true, minLength:3})} id="name" type="text" className="form-control" />
            </div>
-           {errors.name?.type === 'required' && <p>The name field is empty</p>}
-           {errors.name?.type === 'minLength' && <p>The name must be atlest 3 characters</p>}
+           {errors.name?.type === 'required' && <p className="text-danger">The name field is empty</p>}
+           {errors.name?.type === 'minLength' && <p className="text-danger">The name must be atlest 3 characters</p>}
            <div className="mb-3">
              <label htmlFor="age" className="form-label">
                Age
