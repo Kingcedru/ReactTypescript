@@ -1,9 +1,17 @@
-import "./App.css";
-import Form from "./components/Form";
+import { useState } from "react";
+import "./App.css"; 
+import ProductList from "./components/ProductList";
 function App() {
+
+  const [category,setCategory] = useState('')
   return (
     <>
-      <Form/>
+    <select className="form-select" onChange={(event)=> setCategory(event.target.value)}>
+      <option value=''></option>
+      <option value='Clothing'>Clothing</option>
+      <option value='HOusehold'>Household</option>
+    </select>
+      <ProductList category={category}/>
     </>
   );
 }
